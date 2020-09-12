@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Gallery</title>
+    </head>
+    <body>
+    <center><p><h1>Gallery</h1></p></center>
+        <div id = gallery class="con">
+            <figure>
+            
+                <img src="img/gallery (1).jpg" alt="1st Photo" border="0">
+                <img src="img/gallery (2).jpg" alt="2nd Photo" border="0">
+                <img src="img/gallery (3).jpg" alt="3rd Photo" border="0">
+                <img src="img/gallery (4).jpg" alt="4th Photo" border="0"> 
+    
+            </figure>
+        </div>
+    </body>
+</html>
+
+
+<style>
+
+body {
+    margin:0;
+    padding:0;
+    background:#bcffaf;
+    
+}
+
+@-webkit-keyframes animasi{
+    0%{
+        left:0%;
+    }
+    12.5%{
+        left:0%;
+    }
+    
+    25%{
+        left:-100%;
+    }
+    37.5%{
+        left:-100%;
+    }
+    62.5%{
+        left:-200%;
+    }
+    75%{
+        left:-200%;
+    }
+    87.5%{
+        left:-300%;
+    }
+    100%{
+        left:-300%;
+    }
+}
+
+.con{
+    overflow:hidden;
+}
+
+img{
+    width:20%;
+    height: 500px;
+    float:left;
+    
+}
+
+#gallery{
+    border: 10px solid transparent;
+    padding: 15px;
+    border-image: url(post-1.png) 30 stretch;
+}
+figure{
+    
+    border-color: blueviolet;
+    position:relative;
+    width:500%;
+    left:0;
+    padding: 50;
+    margin:0;
+    -webkit-animation:animasi 7s infinite alternate;
+}
+</style>
