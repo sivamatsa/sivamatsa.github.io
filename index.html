@@ -4,8 +4,6 @@
   <meta charset="utf-8">
   <title>Siva Matsa</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <meta content="" name="keywords">
-  <meta content="" name="description">
 
   <!-- Favicons -->
   <link href="img/favicon.png" rel="icon">
@@ -76,9 +74,12 @@
       <div class="table-cell">
         <div class="container">
           <!--<p class="display-6 color-d">Hello, world!</p>-->
+          <!--Uncomment if gap need-->
+          <!--<p style="margin-bottom: 500px;"></p>-->
           <h1 class="intro-title mb-4">I am Siva Matsa</h1>
           <p class="intro-subtitle"><span class="text-slider-items">Web Developer,Software Engineer, Cyber Security Expert,Ethicle Hacker,Block Chain Developer,CNSS Network Security Specialist<!--Web Designer,Frontend Developer,Graphic Designer--></span><strong class="text-slider"></strong></p>
           <!-- <p class="pt-3"><a class="btn btn-primary btn js-scroll px-4" href="#about" role="button">Learn More</a></p> -->
+          
         </div>
       </div>
     </div>
@@ -728,6 +729,90 @@ figure{
 
  -- / Section Gallery End /-->
 
+
+ <!--/ Section Quotes Start /-->
+
+ <section id = "quotes" class = "quote" >
+
+  <div class="title-box text-center">
+    <h3 class="title-a">
+      Quotes
+    </h3>
+    <p class="subtitle-a">
+      Quotes help us understand , Inspire , Motivate , Clarifi and show our approach to things around.
+    </p>
+    <div class="line-mf"></div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+
+  <div id = "quote" class="quotes">
+
+    <!-- remove onclick and alert messege if not impressive-->
+  <p id="a" class="load" onclick="alert('I think you want new Quote.\r\nRefresh the page to get new one.')">Loading...</p>
+  <p id="b" class="auth"></p>
+  
+  </div>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css?family=Fira+Mono&display=swap');
+
+#a{
+  font-family:"Fira Mono",monospace;
+  font-weight: bold;
+  font-size: 25px;
+  quotes: "„" "“";
+}
+
+.load{
+  text-align: center;
+
+}
+.auth{
+  text-align:right;
+  color: blueviolet;
+  margin-right: 300px;
+
+}
+
+#quote{
+  border: thin groove  white ;
+  border-width: auto;
+  border-radius: 10px;
+  position: relative;;
+  z-index: 999;
+  background-color: transparent;
+  padding: 50px 50px;
+  margin: 5px 5px;
+  box-shadow:0px 0px 10px 4px #a5a4a38f;
+  
+  }
+
+</style>
+
+<script>
+
+function updateQuote(){
+$.ajax({
+url: "https://api.quotable.io/random",
+dataType: 'json',
+success: function(res) {
+$(document).ready(function(){
+  $("#a").text(res.content);
+  $("#b").text("- "+res.author);
+});
+}
+});
+}
+updateQuote();
+
+</script>
+
+</section>
+
+<!--/ Section Quotes End /-->
 
   <!--/ Section Contact-Footer Star /-->
   <section class="paralax-mf footer-paralax bg-image sect-mt4 route" style="background-image: url(img/overlay-bg.jpg)">
