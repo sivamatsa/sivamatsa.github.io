@@ -11,7 +11,6 @@
 
   // Preloader default 
 
-	  /*
 	  
   $(window).on('load', function () {
     if ($('#preloader').length) {
@@ -21,7 +20,6 @@
     }
   });
 
-	*/
 
   // Back to top button
   $(window).scroll(function() {
